@@ -16,13 +16,13 @@ router.post('/requestform', jsonParser, function(req, res, next) {
   let transporter = nodemailer.createTransport({
     host: "colbyhemond.me", port: 465, secure: true, // true for 465, false for other ports
     auth: {
-      user: 'contact@colbyhemond.me',
-      pass: 'WM1hem12'
+      user: 'test@colbyhemond.me',
+      pass: 'TEST!23testing'
     }
   });
 
   var mailOptions = {
-    from: 'contact@colbyhemond.me',
+    from: 'test@colbyhemond.me',
     to: 'hemond.colby@gmail.com',
     subject: 'New Request Submitted',
     text: `Name: ` + req.body.name + `\nEmail: ` + req.body.email + `\nPhone: ` + req.body.phone + `\nService: ` + req.body.service
