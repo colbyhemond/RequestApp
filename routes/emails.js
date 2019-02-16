@@ -25,7 +25,7 @@ router.post('/requestform', jsonParser, function(req, res, next) {
     from: 'contact@colbyhemond.me',
     to: 'hemond.colby@gmail.com',
     subject: 'New Request Submitted',
-    text: `Name: ` + req.body.name + `\nEmail: ` + req.body.email + `\nPhone: ` + req.body.phone + `\nService: ` + req.body.service
+    text: `Name: ` + req.body.name + `\nEmail: ` + req.body.email + `\nPhone: ` + req.body.phone + `\nRequests:\n  ` + req.body.service1 + `\n  ` + req.body.service2 + `\n  ` + req.body.service3
   };
 
   let info = transporter.sendMail(mailOptions).catch(error => console.log(`Error sending email: ` + error));
