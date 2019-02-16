@@ -1,6 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Teko:500');
+
 .form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  font-family: "Teko", sans-serif;
 }

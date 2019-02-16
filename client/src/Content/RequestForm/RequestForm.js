@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import "./RequestForm.css";
 import Service from "./Service/Service";
+import 'react-notifications/lib/notifications.css';
 import {NotificationContainer, NotificationManager} from 'react-notifications';
 
 class RequestForm extends Component {
@@ -26,7 +27,7 @@ class RequestForm extends Component {
           NotificationManager.info('Info message');
           break;
         case 'success':
-          NotificationManager.success('Success message', 'Title here');
+          NotificationManager.success('We will be in contact soon.', 'Request Submitted');
           break;
         case 'warning':
           NotificationManager.warning('Warning message', 'Close after 3000ms', 3000);
@@ -36,6 +37,8 @@ class RequestForm extends Component {
             alert('callback');
           });
           break;
+        default:
+          console.log(`Notification not found`);
       }
     };
   };
@@ -56,7 +59,7 @@ class RequestForm extends Component {
   }
 
   handleSubmit(event) {
-
+    event.preventDefault();
     let formData = {
       name: this.state.name,
       phone: this.state.phone,
@@ -71,7 +74,7 @@ class RequestForm extends Component {
         "Content-Type": "application/json",
         // "Content-Type": "application/x-www-form-urlencoded",
       }
-    }).then(res => console.log(res)).catch(error => console.log(`Error posting form: ` + error));
+    }).then(this.createNotification('success')).catch(error => console.log(`Error posting form: ` + error));
 
   }
 
@@ -94,7 +97,7 @@ class RequestForm extends Component {
 
   render() {
     return (<div>
-      <form id="form" onSubmit={this.handleSubmit.bind(this)}>
+      <form className="form" onSubmit={this.handleSubmit.bind(this)}>
 
         <h2>Contact Information</h2>
 
