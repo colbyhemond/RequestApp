@@ -88,11 +88,9 @@ class RequestForm extends Component {
       method: 'post',
       body: JSON.stringify(formData),
       headers: {
-        "Content-Type": "application/json",
-        // "Content-Type": "application/x-www-form-urlencoded",
+        "Content-Type": "application/json"
       }
-    }).then(this.createNotification('success')).catch(error => console.log(`Error posting form: ` + error));
-    this.resetForm()
+    }).then(this.createNotification('success'), this.setState({name: ''}), this.setState({phone: ''}), this.setState({email: ''})).catch(error => console.log(`Error posting form: ` + error));
   }
 
   componentDidMount() {
