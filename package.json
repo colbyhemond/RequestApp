@@ -1,10 +1,13 @@
 {
-  "name": "backend",
+  "name": "requestapp",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
   },
+  "engines": {
+    "node": "~10.15.1"
+  }
   "dependencies": {
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
