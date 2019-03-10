@@ -1,15 +1,16 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Wasatch",
+  "name": "Wasatch First Aid and Safety",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    }
+      "src": "/src/icons/wasatch_app_icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
   ],
-  "start_url": ".",
+  "start_url": "/requestform/",
+  "background_color": "#FFFFFF",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "scope": "/requestform/",
+  "theme_color": "#FFFFFF"
 }
