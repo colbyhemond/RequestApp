@@ -6,7 +6,7 @@
       "src": "/src/icons/wasatch_app_icon.png",
       "type": "image/png",
       "sizes": "192x192"
-    },
+    }
   ],
   "start_url": "/requestform/",
   "background_color": "#FFFFFF",
