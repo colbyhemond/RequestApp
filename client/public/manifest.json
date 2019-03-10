@@ -8,9 +8,8 @@
       "sizes": "192x192"
     }
   ],
-  "start_url": "/requestform/",
+  "start_url": ".",
   "background_color": "#FFFFFF",
   "display": "standalone",
-  "scope": "/requestform/",
   "theme_color": "#FFFFFF"
 }
