@@ -3,7 +3,7 @@
   "name": "Wasatch First Aid and Safety",
   "icons": [
     {
-      "src": "/src/icons/wasatch_app_icon.png",
+      "src": "../src/icons/wasatch_app_icon.png",
       "type": "image/png",
       "sizes": "192x192"
     }
