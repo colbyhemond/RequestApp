@@ -85,7 +85,7 @@ class RequestForm extends Component {
       headers: {
         "Content-Type": "application/json"
       }
-    }).then(this.createNotification('success'), this.setState({name: ''}), this.setState({phone: ''}), this.setState({email: ''})).catch(error => console.log(`Error posting form: ` + error));
+    }).then(this.createNotification('success'), this.setState({name: ''}), this.setState({phone: ''}), this.setState({email: ''}), this.setState({service1: []}), this.setState({service2: []}), this.setState({service3: []})).catch(error => console.log(`Error posting form: ` + error));
   }
 
   componentDidMount() {
