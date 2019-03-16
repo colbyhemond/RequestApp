@@ -22,7 +22,6 @@ class RequestForm extends Component {
     this.handleServicesChange1 = this.handleServicesChange1.bind(this);
     this.handleServicesChange2 = this.handleServicesChange2.bind(this);
     this.handleServicesChange3 = this.handleServicesChange3.bind(this);
-    this.resetForm = this.resetForm.bind(this);
   }
 
   createNotification = (type) => {
@@ -47,10 +46,6 @@ class RequestForm extends Component {
       }
     };
   };
-
-  resetForm() {
-    document.getElementById('form').reset('');
-  }
 
   handleChange(event) {
     const target = event.target;
@@ -103,7 +98,6 @@ class RequestForm extends Component {
       });
       this.setState({services: initialServices});
     }).catch(error => console.log(error));
-
   }
 
   render() {
